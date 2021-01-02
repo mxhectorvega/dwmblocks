@@ -2,7 +2,5 @@
 
 fecha=$(date | awk '{ print $1", " $2" " $3}')
 hora=$(date | awk '{ print $5}' | cut -c 1-5)
-i_fecha=""
-i_hora=""
 
-echo "[ $i_fecha $fecha ] [ $i_hora $hora ]"
+echo "[   $fecha ] [  $hora ]"

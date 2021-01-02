@@ -3,11 +3,15 @@
 LOCO=$(ip ad | awk '/state UP/ { print $2 }' | cut -d":" -f1)
 if [ ${LOCO} == "wlan0" ]
 then
-ssid=$(iwgetid -r)
+icono=""
+ssid=$(cat /proc/net/wireless | awk 'NR==3 {printf "%0.0f%%\n", $3/70*100}')
+#ssid=$(iwgetid -r)
 elif [[ ${LOCO} =~ "enp0s25" ]]
 then
+icono""
 ssid="Red"
 else
+icono=""
 ssid="N/A"
 fi
-echo "[   $ssid ]"
+echo "[ $icono $ssid ]"

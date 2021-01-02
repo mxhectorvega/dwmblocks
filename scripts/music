@@ -1,5 +1,5 @@
 #!/bin/sh
 
-musica=$(mpc current | awk '{print "[   "$1$2$3$4$5$6" ]"}')
-pidof -x demoniompd >/dev/null 2>&1 || demoniompd >/dev/null 2>&1 &
+musica=$(mpc current | awk '{print "[   "$1" "$2" "$3" "$4" "$5" "$6" "$7"]"}')
+#pidof -x demoniompd >/dev/null 2>&1 || demoniompd >/dev/null 2>&1 &
 echo $musica
