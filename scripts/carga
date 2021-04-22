@@ -31,4 +31,4 @@ else
 icono_bateria=""
 fi
 
-echo $icono_carga $icono_bateria
+echo [ $icono_carga $icono_bateria
